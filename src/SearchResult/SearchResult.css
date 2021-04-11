@@ -75,6 +75,10 @@
     right: 30px;
 }
 
+.dark-mode .searchResult__heart, .dark-mode .searchResults__price{
+    color: #fff;
+}
+
 .dark-mode strong{
     color: #fff;
 }
