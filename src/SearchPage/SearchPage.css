@@ -1,0 +1,30 @@
+.searchPage__info {
+    padding: 20px;
+  }
+
+.searchPage__info > p {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+.dark-mode .searchPage__info > p {
+  color: lightgray;
+}
+
+.searchPage__info > h1 {
+    margin-bottom: 30px;
+}
+
+.dark-mode .searchPage__info > h1 {
+  color: lightgray;
+}
+
+.searchPage__info > button {
+    border-radius: 30px;
+    text-transform: inherit;
+    margin: 5px;
+  }
+
+  .dark-mode .searchPage__info > button {
+    color: lightgray;
+    border-color: lightgray;
+  }

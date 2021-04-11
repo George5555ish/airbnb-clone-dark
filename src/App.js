@@ -1,23 +1,40 @@
-import logo from './logo.svg';
+import React, {useState} from 'react';
+
 import './App.css';
 
+
+import Header from './Header/Header';
+import Home from './Home/Home';
+import Footer from './Footer/Footer'
+import SearchPage from './SearchPage/SearchPage';
+
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
 function App() {
+
+  const [darkMode, setDarkMode] = useState(false);
+
+
+  const handleDarkMode = () => {
+
+    setDarkMode(!darkMode);
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={darkMode ? "app dark-mode" : "app"}>
+              <Router>
+        <Header handleDarkMode={handleDarkMode} darkMode={darkMode}/>
+        
+        <Switch>
+          <Route path="/search">
+            <SearchPage />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+        
+        <Footer />
+      </Router>
     </div>
   );
 }

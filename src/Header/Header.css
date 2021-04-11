@@ -1,0 +1,103 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 100;
+    width: 100%;
+  }
+
+  .dark-mode .header{
+      background-color: #000;
+  }
+  
+  .header__icon {
+    object-fit: contain;
+    height: 100px;
+    margin-left: 20px;
+  }
+  
+  .header__center {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    max-width: fit-content;
+    padding: 10px;
+    height: 30px;
+    border: 1px solid lightgray;
+    border-radius: 999px;
+  }
+
+  
+  .header__center > input {
+    border: none;
+    padding: 10px;
+    outline-width: 0;
+    /* width: 250px; */
+  }
+
+  .dark-mode   .header__center > input {
+    /* transition: 0.33s; */
+      background: #000;
+      color: #fff;
+  }
+  
+  .header__right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 15vw;
+    margin-right: 80px;
+  }
+
+  .dark-mode .header__right p{
+        color: #fff;
+  }
+  .dark-mode ::placeholder {
+    transition: 0.33s;
+    background-color: #fff;
+  }
+
+
+  /* Toogle Section */
+
+  .toogle-container{
+      width: 50px;
+      height: 25px;
+      border-radius: 25px;;
+      background: rgb(197, 197, 197);
+      position: relative;
+      cursor: pointer;
+  }
+
+  .toogle-div{
+      position: absolute;
+      border-radius: 50%;
+      right: 25px;
+      width: 25px;
+      height: 25px;
+      cursor: pointer;
+      background: #fff;
+      transition: 0.33s;
+  }
+
+  .dark-mode .toogle-div{
+      right: 0;
+      background: rgb(129, 141, 151);
+  }
+
+  .dark-mode .toogle-container{
+      background: rgb(196, 228, 253);
+  }
+
+  .toogle-container:hover{
+      background-color: rgb(212, 212, 212);
+  }
+
+  .dark-mode .search-icon, .dark-mode .expand-icon, .dark-mode .language-icon{
+      color: #fff;
+  }
+
+  
